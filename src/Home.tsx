@@ -5,6 +5,7 @@ import { Button, CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import "./styles/Home.css";
 import homeImage from "./assets/tbTom_512_30f.gif";
+import BannerImage from "./assets/solanatom_home_banner.jpg";
 
 import * as anchor from "@project-serum/anchor";
 
@@ -12,6 +13,29 @@ import { LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
+
+// Carousel imgs
+import carousel1 from "./assets/carousel/1.jpg";
+import carousel2 from "./assets/carousel/2.jpg";
+import carousel3 from "./assets/carousel/3.jpg";
+import carousel4 from "./assets/carousel/4.jpg";
+import carousel5 from "./assets/carousel/5.jpg";
+import carousel6 from "./assets/carousel/6.jpg";
+import carousel7 from "./assets/carousel/7.jpg";
+import carousel8 from "./assets/carousel/8.jpg";
+import carousel9 from "./assets/carousel/9.jpg";
+import carousel10 from "./assets/carousel/10.jpg";
+import carousel11 from "./assets/carousel/11.jpg";
+import carousel12 from "./assets/carousel/12.jpg";
+import carousel13 from "./assets/carousel/13.jpg";
+import carousel14 from "./assets/carousel/14.jpg";
+import carousel15 from "./assets/carousel/15.jpg";
+import carousel16 from "./assets/carousel/16.jpg";
+import carousel17 from "./assets/carousel/17.jpg";
+import carousel18 from "./assets/carousel/18.jpg";
+import carousel19 from "./assets/carousel/19.jpg";
+import carousel20 from "./assets/carousel/20.jpg";
+
 
 import {
   CandyMachine,
@@ -47,6 +71,12 @@ const Home = (props: HomeProps) => {
   const [itemsAvailable, setItemsAvailable] = useState(0);
   const [itemsRedeemed, setItemsRedeemed] = useState(0);
   const [itemsRemaining, setItemsRemaining] = useState(0);
+
+  const hRedStyle = { color: "red" };
+  const hWhiteStyle = { color: "white" };
+  const hBlueStyle = { color: "blue" };
+  const hBlackStyle = { color: "black" };
+
 
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
@@ -169,7 +199,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <main className="main">
-      <div className="home">
+
 
       <div className="navbar">
         {wallet && (
@@ -181,50 +211,98 @@ const Home = (props: HomeProps) => {
         </div>
       </div>
 
+      <div className="home" style={{ backgroundImage: `url(${BannerImage})` }}>
+        <div className="headerContainer">
+          <h1><span style={hWhiteStyle}>Solana</span>{" "}<span style={hRedStyle}>Tom</span></h1>
+          <h3>Only 225 images, each unique @ 1 SOL. Minting begins December 3, 2021.</h3>
+          <h5>To mint simply connect your Phantom wallet and smash that mint button.</h5>
+            <MintContainer>
 
-      <div className="leftSide" style={{ backgroundImage: `url(${homeImage})` }}>
+              <MintButton
+                disabled={isSoldOut || isMinting || !isActive}
+                onClick={onMint}
+                variant="contained"
+              >
+                {isSoldOut ? (
+                  "SOLD OUT"
+                ) : isActive ? (
+                  isMinting ? (
+                    <CircularProgress />
+                  ) : (
+                    "MINT"
+                  )
+                ) : (
+                  <Countdown
+                    date={startDate}
+                    onMount={({ completed }) => completed && setIsActive(true)}
+                    onComplete={() => setIsActive(true)}
+                    renderer={renderCounter}
+                  />
+                )}
+              </MintButton>
+
+              </MintContainer>
+
+              {wallet && <h3>Supply: {itemsRedeemed} / {itemsAvailable}</h3>}
+        </div>
+      </div>
+
+      <div></div>
+
+      <div className="carouselContainer">
+        <div className="marquee-wrapper">
+          <div className="marquee">
+            <img src={carousel1} alt="Solana Tom #1" />
+            <img src={carousel2} alt="Solana Tom #2" />
+            <img src={carousel3} alt="Solana Tom #3" />
+            <img src={carousel4} alt="Solana Tom #4" />
+            <img src={carousel5} alt="Solana Tom #5" />
+            <img src={carousel6} alt="Solana Tom #6" />
+            <img src={carousel7} alt="Solana Tom #7" />
+            <img src={carousel8} alt="Solana Tom #8" />
+            <img src={carousel9} alt="Solana Tom #9" />
+            <img src={carousel10} alt="Solana Tom #10" />
+            <img src={carousel11} alt="Solana Tom #11" />
+            <img src={carousel12} alt="Solana Tom #12" />
+            <img src={carousel13} alt="Solana Tom #13" />
+            <img src={carousel14} alt="Solana Tom #14" />
+            <img src={carousel15} alt="Solana Tom #15" />
+            <img src={carousel16} alt="Solana Tom #16" />
+            <img src={carousel17} alt="Solana Tom #17" />
+            <img src={carousel18} alt="Solana Tom #18" />
+            <img src={carousel19} alt="Solana Tom #19" />
+            <img src={carousel20} alt="Solana Tom #20" />
+          </div>
+        </div>
+      </div>
+
+      <div className="attributes">
+        <div className="leftSide text-center">
+          <h1 style={hBlueStyle}>Who is Solana Tom?</h1>
+          <p>Solana Tom aka Tom Terrific aka TB Tom aka 2-Rings Tom aka Pretty boy Tom is a handsome young man from Thunder Bay. His friend's call him TB Tom, and some say he bears a strong resemblence to a famous NFL quarterback. Solana Tom does not play any sports, but he is in a few fantasy football leagues and likes to dress up in his favorite jersey every Sunday.</p>
+          <p>There will only be ever 225 Solana Tom NFTs minted in rare variations never seen before. Minting will commence on December 10, 2021 at 00:00:00 UTC time. Pricing will be one SOL each.</p>
+          <p>&nbsp;</p>
+        </div>
+
+        <div className="rightSide text-center">
+          <h1 style={hRedStyle}>How to Mint</h1>
+          <p>Minting a Solona Tom has never been easier! First, before you can mint, you will need a Phantom browser wallet and at least 1.01 SOL to cover the mint + tx fees.</p>
+          <p>&nbsp;</p>
+          <p>✅ Secure some Solana  from your favorite Crypto broker</p>
+          <p>✅ Download the <a href="https://phantom.app">Phantom wallet</a> and transfer enough SOL for the transaction (~1.01 SOL)</p>
+          <p>✅ Click the Connect Wallet button on the top right corner of the website </p>
+          <p>✅ Click the Mint button (note you can only mint one at a time to ensure fair access) </p>
+          <p>✅ Enjoy your NFT and 💰💰💰 PROFIT 💰💰💰 </p>
+          <p>&nbsp;</p>
+
+
+        </div>
+      
       
       </div>
-      <div className="rightSide">
-      
-        <MintContainer>
-          <h1>Solana Tom Collection</h1>
-          <p>Solana Tom is a handsome young man from Thunder Bay. His friend's call him TB Tom, and some say he bears a strong resemblence to a famous NFL quarterback. Solana Tom does not play any sports, but he is in a few fantasy football leagues and likes to dress up in his favorite jersey every Sunday.</p>
-          <p>This collection consists of only 225 images, we are offering each for 1 SOL. Minting begins December 3, 2021.</p>
-          <p>Act fast to get your Solana Tom NFT before it sells out!  These unique images are the ultimate status symbol for your fantasy football league or Twitter profile picture.</p>
-          <p>To mint simply connect your Solana wallet and smash that mint button.</p>
-
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
-              ) : (
-                "MINT"
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
-            )}
-          </MintButton>
-
-          </MintContainer>
 
 
 
-          {wallet && <p>Supply: {itemsRedeemed} / {itemsAvailable}</p>}
-      </div>
-
-      </div>
 
       <Snackbar
         open={alertState.open}
