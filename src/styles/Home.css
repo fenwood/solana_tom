@@ -1,0 +1,102 @@
+
+.main {
+    width: 100%;
+}
+
+.home {
+    height: 90vh;
+    display: flex;
+
+}
+
+.headingTitle {
+    width: 100%;
+    padding-top: 20px;
+}
+
+
+.navbar {
+    position: fixed;
+    overflow: hidden;
+    background-color: green;
+    top: 0;
+    width: 100%;
+    margin: 15;
+}
+
+.navbar p {
+    float: left;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar-right {
+    float: right;
+    top: 0;
+}
+
+/* Old */
+.homeContainer {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.homeContainer .walletHeader {
+    background-color: green; 
+    display: flex; 
+    justify-content: space-between;
+}
+.main .rightSide {
+    height: 100%;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.homeContainer .secondaryContainer {
+    padding: 30; 
+    display: flex; 
+    flex: 1; 
+    flex-direction: column;
+}
+
+.homeContainer .mintContainer {
+    background-color: blue;
+    display: flex; 
+    flex: 1; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.main .leftSide {
+    height: 100%;
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: color;
+}
+
+/*
+@media screen and (min-width: 600px) {
+    .main .leftSide {
+        height: 100%;
+        flex: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: color;
+    }
+}
+
+*/
