@@ -280,7 +280,7 @@ const Home = (props: HomeProps) => {
         <div className="leftSide text-center">
           <h1 style={hBlueStyle}>Who is Solana Tom?</h1>
           <p>Solana Tom aka Tom Terrific aka TB Tom aka 2-Rings Tom aka Pretty boy Tom is a handsome young man from Thunder Bay. His friend's call him TB Tom, and some say he bears a strong resemblence to a famous NFL quarterback. Solana Tom does not play any sports, but he is in a few fantasy football leagues and likes to dress up in his favorite jersey every Sunday.</p>
-          <p>There will only be ever 225 Solana Tom NFTs minted in rare variations never seen before. Minting will commence on December 10, 2021 at 00:00:00 UTC time. Pricing will be one SOL each.</p>
+          <p>There will only be ever 225 Solana Tom NFTs minted in rare variations never seen before. Minting will commence on December 15, 2021 at 02:00:00 EST time. Pricing will be one SOL each.</p>
           <p>&nbsp;</p>
         </div>
 
