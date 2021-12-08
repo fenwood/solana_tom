@@ -4,7 +4,6 @@ import Countdown from "react-countdown";
 import { Button, CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import "./styles/Home.css";
-import homeImage from "./assets/tbTom_512_30f.gif";
 import BannerImage from "./assets/solanatom_home_banner.jpg";
 
 import * as anchor from "@project-serum/anchor";
@@ -297,6 +296,11 @@ const Home = (props: HomeProps) => {
           <p>&nbsp;</p>
 
 
+        </div>
+
+        <div className="footer">
+          <p>Follow us on <a href="https://twitter.com/sonicvapeclub" target="_blank" rel="noreferrer">Twitter</a> or join or <a href="https://discord.gg/WtzBaWbyd4" target="_blank" rel="noreferrer">Discord</a> | Solana Tom is a <a href="https://sonicvapeclub.com" target="_blank" rel="noreferrer">Sonic Vape Club</a> Production</p>
+        
         </div>
       
       

@@ -88,7 +88,8 @@
 .carouselContainer {
     width: 100%;
     height: 175px;
-    padding-top: 10px
+    padding-top: 10px;
+    background-color: white;
   }
   
   .marquee-wrapper {
@@ -235,6 +236,21 @@
 }
 
 */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #303030;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+}
+
 
 @media only screen and (max-width: 650px) {
     .home {
