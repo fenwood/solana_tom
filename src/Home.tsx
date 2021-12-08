@@ -215,7 +215,7 @@ const Home = (props: HomeProps) => {
         <div className="headerContainer">
           <h1><span style={hWhiteStyle}>Solana</span>{" "}<span style={hRedStyle}>Tom</span></h1>
           <h3>225 unique images @ 1 SOL. </h3>
-          <h3> <span style={hRedStyle}>Minting begins December 10, 2021.</span></h3>
+          <h3> <span style={hRedStyle}>Minting begins December 15, 2021.</span></h3>
           <h5>To mint simply connect your Phantom wallet and smash that mint button.</h5>
             <MintContainer>
 
